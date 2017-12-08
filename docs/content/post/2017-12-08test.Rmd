@@ -1,0 +1,53 @@
+---
+title: ggplot入りの日本語RmdをPDF出力する
+author: ''
+date: '2017-12-08'
+slug: ggplot入りの日本語rmdをpdf出力する
+categories: []
+tags: [R]
+---
+
+
+#Introduction
+
+件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。
+また**Rmdファイルの名前を日本語にするとエラーを吐く**のでファイル名を英語にしてあげることも必要。
+
+#YAML
+
+```{r,eval=FALSE}
+
+---
+title: "ggplot_japanese_rmarkdown"
+date: "`r format(Sys.time(), '%Y/%m/%d')`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    number_sections: true
+    toc: true
+header-includes: 
+  - \usepackage{xltxtra} 
+  - \usepackage{zxjatype} 
+  - \usepackage[ipa]{zxjafont} 
+  - \setjamainfont{Meiryo}  
+  - \setmainfont{Meiryo} 
+---
+
+```
+
+#ggplotに日本語入れる対策コード
+
+こちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
+
+```{r, eval=FALSE}
+
+library(knitr)
+
+if (knitr::opts_knit$get("rmarkdown.pandoc.to") %in% c("beamer", "latex")) {
+  options(device = function(file, width = 7, height = 7, ...) {
+    cairo_pdf(tempfile(), width = width, height = height, ...)
+  })
+  knitr::opts_chunk$set(dev="cairo_pdf", dev.args=list(family="Meiryo"))
+}
+
+```

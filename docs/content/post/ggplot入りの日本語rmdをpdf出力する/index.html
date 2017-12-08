@@ -22,15 +22,15 @@
         
 
         <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="ggplot入りの日本語RmdをPDF出力する"/>
-<meta name="twitter:description" content="Introduction 件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。
- YAML --- title: &quot;ggplot_japanese_rmarkdown&quot; date: &quot;`r format(Sys.time(), &#39;%Y/%m/%d&#39;)`&quot; output: pdf_document: latex_engine: xelatex number_sections: true toc: true header-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} ---  ggplotに日本語入れる対策コード こちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
-library(knitr) if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&quot;, &quot;latex&quot;)) { options(device = function(file, width = 7, height = 7, ...) { cairo_pdf(tempfile(), width = width, height = height, ...) }) knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meiryo&quot;)) }  "/>
+<meta name="twitter:description" content="Introduction件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。
+YAML---title: &quot;ggplot_japanese_rmarkdown&quot;date: &quot;`r format(Sys.time(), &#39;%Y/%m/%d&#39;)`&quot;output:pdf_document:latex_engine: xelatexnumber_sections: truetoc: trueheader-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} ---ggplotに日本語入れる対策コードこちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
+library(knitr)if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&quot;, &quot;latex&quot;)) {options(device = function(file, width = 7, height = 7, ...) {cairo_pdf(tempfile(), width = width, height = height, ...)})knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meiryo&quot;))}"/>
 <meta name="twitter:site" content="@example"/>
 
         <meta property="og:title" content="ggplot入りの日本語RmdをPDF出力する" />
-<meta property="og:description" content="Introduction 件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。
- YAML --- title: &quot;ggplot_japanese_rmarkdown&quot; date: &quot;`r format(Sys.time(), &#39;%Y/%m/%d&#39;)`&quot; output: pdf_document: latex_engine: xelatex number_sections: true toc: true header-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} ---  ggplotに日本語入れる対策コード こちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
-library(knitr) if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&quot;, &quot;latex&quot;)) { options(device = function(file, width = 7, height = 7, ...) { cairo_pdf(tempfile(), width = width, height = height, ...) }) knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meiryo&quot;)) }  " />
+<meta property="og:description" content="Introduction件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。
+YAML---title: &quot;ggplot_japanese_rmarkdown&quot;date: &quot;`r format(Sys.time(), &#39;%Y/%m/%d&#39;)`&quot;output:pdf_document:latex_engine: xelatexnumber_sections: truetoc: trueheader-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} ---ggplotに日本語入れる対策コードこちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
+library(knitr)if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&quot;, &quot;latex&quot;)) {options(device = function(file, width = 7, height = 7, ...) {cairo_pdf(tempfile(), width = width, height = height, ...)})knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meiryo&quot;))}" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/" />
 
@@ -52,9 +52,9 @@ library(knitr) if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(
 
         
 <meta itemprop="name" content="ggplot入りの日本語RmdをPDF出力する">
-<meta itemprop="description" content="Introduction 件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。
- YAML --- title: &quot;ggplot_japanese_rmarkdown&quot; date: &quot;`r format(Sys.time(), &#39;%Y/%m/%d&#39;)`&quot; output: pdf_document: latex_engine: xelatex number_sections: true toc: true header-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} ---  ggplotに日本語入れる対策コード こちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
-library(knitr) if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&quot;, &quot;latex&quot;)) { options(device = function(file, width = 7, height = 7, ...) { cairo_pdf(tempfile(), width = width, height = height, ...) }) knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meiryo&quot;)) }  ">
+<meta itemprop="description" content="Introduction件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。
+YAML---title: &quot;ggplot_japanese_rmarkdown&quot;date: &quot;`r format(Sys.time(), &#39;%Y/%m/%d&#39;)`&quot;output:pdf_document:latex_engine: xelatexnumber_sections: truetoc: trueheader-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} ---ggplotに日本語入れる対策コードこちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
+library(knitr)if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&quot;, &quot;latex&quot;)) {options(device = function(file, width = 7, height = 7, ...) {cairo_pdf(tempfile(), width = width, height = height, ...)})knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meiryo&quot;))}">
 
 
 <meta itemprop="datePublished" content="2017-12-08T00:00:00&#43;00:00" />
@@ -303,9 +303,6 @@ library(knitr) if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(
 
 
     
-    
-        
-    
 
 
         
@@ -313,7 +310,7 @@ library(knitr) if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(
         
 
         <a href="/blog/blog/creating-a-new-theme/" class="image featured">
-            <img src="/blog/img/2014/092014/09/pic03.jpg" alt="">
+            <img src="/blog/date2014/09/pic03.jpg" alt="">
         </a>
     
 
@@ -843,6 +840,9 @@ if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&qu
 
 
     
+    
+        
+    
 
 
         
@@ -850,7 +850,7 @@ if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&qu
         
 
         <a href="/blog/blog/creating-a-new-theme/" class="image featured">
-            <img src="/blog/img//pic03.jpg" alt="">
+            <img src="/blog/img/2014/09/pic03.jpg" alt="">
         </a>
     
 
@@ -880,6 +880,9 @@ if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&qu
 
 
     
+    
+        
+    
 
 
         
@@ -887,7 +890,7 @@ if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&qu
         
 
         <a href="/blog/blog/goisforlovers/" class="image featured">
-            <img src="/blog/img//pic02.jpg" alt="">
+            <img src="/blog/img/2014/04/pic02.jpg" alt="">
         </a>
     
 
@@ -917,6 +920,9 @@ if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&qu
 
 
     
+    
+        
+    
 
 
         
@@ -924,7 +930,7 @@ if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&qu
         
 
         <a href="/blog/blog/hugoisforlovers/" class="image featured">
-            <img src="/blog/img//pic01.jpg" alt="">
+            <img src="/blog/img/2014/04/pic01.jpg" alt="">
         </a>
     
 
