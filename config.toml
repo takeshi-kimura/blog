@@ -1,4 +1,7 @@
 theme = "hugo_theme_robust"
-baseURL = "http://example.org/"
+baseURL = "https://takeshi-kimura.github.io/blog/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Real World Analytics"
+relativeurls = true
+publishDir = "docs"
+hasCJKLanguage = true
