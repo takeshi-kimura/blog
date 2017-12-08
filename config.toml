@@ -1,5 +1,9 @@
 title = "My cool new Blog"
-baseURL = "https://example.com"
+baseURL = "https://takeshi-kimura.github.io/blog/"
+relativeurls = true
+publishDir = "docs"
+hasCJKLanguage = true
+languageCode = "ja-jp"
 theme = "bilberry-hugo-theme"
 
 enableRobotsTXT = true
