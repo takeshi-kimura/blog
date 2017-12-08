@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
+    <title>Posts on Real World Analytics</title>
     <link>/post/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <description>Recent content in Posts on Real World Analytics</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <language>ja-jp</language>
+    <lastBuildDate>Fri, 08 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>ggplot入りの日本語RmdをPDF出力する</title>
+      <link>/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/</link>
+      <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+      <guid>/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/</guid>
+      <description>Introduction 件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確</description>
     </item>
     
   </channel>

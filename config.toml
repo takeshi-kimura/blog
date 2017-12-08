@@ -3,6 +3,5 @@ baseURL = "http://example.org/"
 title = "Real World Analytics"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 relativeurls = true
-publishDir = "docs"
 hasCJKLanguage = true
 languageCode = "ja-jp"
