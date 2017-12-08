@@ -1,4 +1,4 @@
 theme = "hugo_theme_robust"
-baseURL = "https://takeshi-kimura.github.io/blog/"
+baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Real World Analytics" 
+title = "My New Hugo Site"
