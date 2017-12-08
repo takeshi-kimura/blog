@@ -268,18 +268,6 @@
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/blog/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/">ggplot入りの日本語RmdをPDF出力する</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2017-12-08'>
-                                    December 8, 2017</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
                                 <h3><a href="/blog/blog/creating-a-new-theme/">Creating a New Theme</a></h3>
                                 
                                 <time class="published" datetime=
@@ -299,6 +287,9 @@
 
 
     
+    
+        
+    
 
 
         
@@ -306,7 +297,7 @@
         
 
         <a href="/blog/blog/creating-a-new-theme/" class="image featured">
-            <img src="/blog/img//pic03.jpg" alt="">
+            <img src="/blog/img/2014/09/pic03.jpg" alt="">
         </a>
     
 
@@ -372,6 +363,9 @@
 
 
     
+    
+        
+    
 
 
         
@@ -379,7 +373,7 @@
         
 
         <a href="/blog/blog/hugoisforlovers/" class="image featured">
-            <img src="/blog/img//pic01.jpg" alt="">
+            <img src="/blog/img/2014/04/pic01.jpg" alt="">
         </a>
     
 
@@ -387,12 +381,6 @@
                         </article>
                 
 
-                
-                    <a href=
-                        
-                            /blog/
-                        
-                        class="button">View more posts</a>
                 
             </div>
         </section>
@@ -429,118 +417,9 @@
 
     
 
-    <p><p>Introduction
-件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。</p>
-
-<h2 id="yaml">YAML</h2>
-
-<p>title: &quot;ggplot_japanese_rmarkdown&quot;
-date: &quot;<code>r format(Sys.time(), &amp;#39;%Y/%m/%d&amp;#39;)</code>&quot;
-output:
-pdf_document:
-latex_engine: xelatex
-number_sections: true
-toc: true
-header-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} &mdash;</p>
-
-<p>ggplotに日本語入れる対策コード
-こちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
-library(knitr)
-if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&quot;, &quot;latex&quot;)) {
-options(device = function(file, width = 7, height = 7, &hellip;) {
-cairo_pdf(tempfile(), width = width, height = height, &hellip;)
-})
-knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meiryo&quot;))
-}</p>
-</p>
-
-    <footer>
-        <ul class="actions">
-            <li><a href="/blog/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/" class="button big">Continue Reading</a></li>
-        </ul>
-        <ul class="stats">
-    
-        
-
-        
-        
-            <li>
-                
-                
-                    
-
-                    
-
-                    
-                        <i class="fa fa-sitemap">&nbsp;</i>
-                    
-
-                    
-                        Category
-                    
-                
-            </li>
-        
-    
-
-    
-    
-        <li><a href='/blog/categories/r'>R</a></li>
-    
-</ul>
-
-    </footer>
-</article>
-
-        
-            <article class="post">
-    <header>
-    <div class="title">
-        
-            <h2><a href="/blog/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/">ggplot入りの日本語RmdをPDF出力する</a></h2>
-        
-        
-    </div>
-    <div class="meta">
-        
-
-        <time class="published"
-            datetime='2017-12-08'>
-            December 8, 2017</time>
-        <span class="author"></span>
-        
-            <p>1 minute read</p>
-        
-        
-    </div>
-</header>
-
-    
-
-    <p><p>Introduction
-件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。</p>
-
-<h2 id="yaml">YAML</h2>
-
-<p>title: &quot;ggplot_japanese_rmarkdown&quot;
-date: &quot;<code>r format(Sys.time(), &amp;#39;%Y/%m/%d&amp;#39;)</code>&quot;
-output:
-pdf_document:
-latex_engine: xelatex
-number_sections: true
-toc: true
-header-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} &mdash;</p>
-
-<p>ggplotに日本語入れる対策コード
-こちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
-library(knitr)
-if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&quot;, &quot;latex&quot;)) {
-options(device = function(file, width = 7, height = 7, &hellip;) {
-cairo_pdf(tempfile(), width = width, height = height, &hellip;)
-})
-knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meiryo&quot;))
-}</p>
-</p>
+    <p>Introduction 件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。
+ YAML &mdash; title: &quot;ggplot_japanese_rmarkdown&quot; date: &quot;<code>r format(Sys.time(), &amp;#39;%Y/%m/%d&amp;#39;)</code>&quot; output: pdf_document: latex_engine: xelatex number_sections: true toc: true header-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} &mdash;  ggplotに日本語入れる対策コード こちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
+library(knitr) if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&quot;, &quot;latex&quot;)) { options(device = function(file, width = 7, height = 7, &hellip;) { cairo_pdf(tempfile(), width = width, height = height, &hellip;) }) knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meiryo&quot;)) }</p>
 
     <footer>
         <ul class="actions">
@@ -724,20 +603,6 @@ knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meir
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/blog/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/">ggplot入りの日本語RmdをPDF出力する</a>
-              </h3>
-              
-              <time class="published" datetime='2017-12-08'>
-                December 8, 2017
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
                 <a href="/blog/blog/creating-a-new-theme/">Creating a New Theme</a>
               </h3>
               
@@ -798,9 +663,6 @@ knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meir
 
 
     
-    
-        
-    
 
 
         
@@ -808,7 +670,7 @@ knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meir
         
 
         <a href="/blog/blog/goisforlovers/" class="image featured">
-            <img src="/blog/date2014/042014/04/pic02.jpg" alt="">
+            <img src="/blog/date2014/04/pic02.jpg" alt="">
         </a>
     
 
@@ -845,7 +707,7 @@ knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meir
         
 
         <a href="/blog/blog/hugoisforlovers/" class="image featured">
-            <img src="/blog/img/2014/04/pic01.jpg" alt="">
+            <img src="/blog/img//pic01.jpg" alt="">
         </a>
     
 
@@ -854,12 +716,6 @@ knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meir
         
       </div>
 
-      
-        <a href=
-          
-            /blog/
-          
-        class="button">View more posts</a>
       
     </div>
   </section>
@@ -905,8 +761,8 @@ knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meir
           <article>
             <header>
               
-                <a href="/categories/r/">R</a>
-                <span style="float:right;">2</span>
+                <a href="/categories/go/">Go</a>
+                <span style="float:right;">1</span>
               
             </header>
           </article>
@@ -916,7 +772,7 @@ knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meir
           <article>
             <header>
               
-                <a href="/categories/go/">Go</a>
+                <a href="/categories/r/">R</a>
                 <span style="float:right;">1</span>
               
             </header>
