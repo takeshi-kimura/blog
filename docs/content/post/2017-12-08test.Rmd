@@ -50,3 +50,7 @@ if (knitr::opts_knit$get("rmarkdown.pandoc.to") %in% c("beamer", "latex")) {
 }
 
 ```
+
+##Source Code and sample pdf file
+
+please download [here](https://github.com/takeshi-kimura/blog/tree/master/files/2017-12-09)
