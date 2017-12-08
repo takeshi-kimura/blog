@@ -48,9 +48,9 @@ library(knitr)if (knitr::opts_knit$get(&amp;quot;rmarkdown.pandoc.to&amp;quot;)
       <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>/blog/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/</guid>
-      <description>Introduction 件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。
- YAML --- title: &amp;quot;ggplot_japanese_rmarkdown&amp;quot; date: &amp;quot;`r format(Sys.time(), &amp;#39;%Y/%m/%d&amp;#39;)`&amp;quot; output: pdf_document: latex_engine: xelatex number_sections: true toc: true header-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} ---  ggplotに日本語入れる対策コード こちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
-library(knitr) if (knitr::opts_knit$get(&amp;quot;rmarkdown.pandoc.to&amp;quot;) %in% c(&amp;quot;beamer&amp;quot;, &amp;quot;latex&amp;quot;)) { options(device = function(file, width = 7, height = 7, ...) { cairo_pdf(tempfile(), width = width, height = height, ...) }) knitr::opts_chunk$set(dev=&amp;quot;cairo_pdf&amp;quot;, dev.args=list(family=&amp;quot;Meiryo&amp;quot;)) }  </description>
+      <description>Introduction件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。
+YAML---title: &amp;quot;ggplot_japanese_rmarkdown&amp;quot;date: &amp;quot;`r format(Sys.time(), &amp;#39;%Y/%m/%d&amp;#39;)`&amp;quot;output:pdf_document:latex_engine: xelatexnumber_sections: truetoc: trueheader-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} ---ggplotに日本語入れる対策コードこちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
+library(knitr)if (knitr::opts_knit$get(&amp;quot;rmarkdown.pandoc.to&amp;quot;) %in% c(&amp;quot;beamer&amp;quot;, &amp;quot;latex&amp;quot;)) {options(device = function(file, width = 7, height = 7, ...) {cairo_pdf(tempfile(), width = width, height = height, ...)})knitr::opts_chunk$set(dev=&amp;quot;cairo_pdf&amp;quot;, dev.args=list(family=&amp;quot;Meiryo&amp;quot;))}</description>
     </item>
     
   </channel>
