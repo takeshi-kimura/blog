@@ -4,3 +4,4 @@ languageCode = "en-us"
 title = "Real World Analytics"
 relativeurls = true
 hasCJKLanguage = true
+publishDir = "docs"
