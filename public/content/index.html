@@ -335,7 +335,7 @@
         
 
         <a href="/blog/blog/goisforlovers/" class="image featured">
-            <img src="/blog/img//pic02.jpg" alt="">
+            <img src="/blog/img/2014/04/pic02.jpg" alt="">
         </a>
     
 
@@ -421,9 +421,30 @@
 
     
 
-    <p>Introduction 件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。
- YAML &mdash; title: &quot;ggplot_japanese_rmarkdown&quot; date: &quot;<code>r format(Sys.time(), &amp;#39;%Y/%m/%d&amp;#39;)</code>&quot; output: pdf_document: latex_engine: xelatex number_sections: true toc: true header-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} &mdash;  ggplotに日本語入れる対策コード こちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
-library(knitr) if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&quot;, &quot;latex&quot;)) { options(device = function(file, width = 7, height = 7, &hellip;) { cairo_pdf(tempfile(), width = width, height = height, &hellip;) }) knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meiryo&quot;)) }</p>
+    <p><p>Introduction
+件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。</p>
+
+<h2 id="yaml">YAML</h2>
+
+<p>title: &quot;ggplot_japanese_rmarkdown&quot;
+date: &quot;<code>r format(Sys.time(), &amp;#39;%Y/%m/%d&amp;#39;)</code>&quot;
+output:
+pdf_document:
+latex_engine: xelatex
+number_sections: true
+toc: true
+header-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} &mdash;</p>
+
+<p>ggplotに日本語入れる対策コード
+こちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
+library(knitr)
+if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&quot;, &quot;latex&quot;)) {
+options(device = function(file, width = 7, height = 7, &hellip;) {
+cairo_pdf(tempfile(), width = width, height = height, &hellip;)
+})
+knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meiryo&quot;))
+}</p>
+</p>
 
     <footer>
         <ul class="actions">
