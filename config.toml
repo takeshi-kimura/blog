@@ -1,7 +1,4 @@
 theme = "hugo_theme_robust"
-baseURL = "http://example.org/"
+baseURL = "https://takeshi-kimura.github.io/blog/"
+languageCode = "en-us"
 title = "Real World Analytics"
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-relativeurls = true
-hasCJKLanguage = true
-languageCode = "ja-jp"
