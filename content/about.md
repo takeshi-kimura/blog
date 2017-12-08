@@ -1,6 +1,20 @@
 ---
 title: "About"
-date: "2016-05-05T21:48:51-07:00"
+date: "2014-04-09"
+layout: "about"
+menu: "main"
+weight: 50
 ---
 
-This is a "hello world" example website for the [**blogdown**](https://github.com/rstudio/blogdown) package. The theme was forked from [@jrutheiser/hugo-lithium-theme](https://github.com/jrutheiser/hugo-lithium-theme) and modified by [Yihui Xie](https://github.com/yihui/hugo-lithium-theme).
+Hugo is a static site engine written in Go.
+
+
+It makes use of a variety of open source projects including:
+
+* [Cobra](https://github.com/spf13/cobra)
+* [Viper](https://github.com/spf13/viper)
+* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
+* [Cast](https://github.com/spf13/cast)
+
+Learn more and contribute on [GitHub](https://github.com/gohugoio).
+
