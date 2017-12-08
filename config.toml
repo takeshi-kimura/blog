@@ -1,6 +1,6 @@
-baseurl = "/"
+baseurl = "https://takeshi-kimura.github.io/blog/"
 languageCode = "en-us"
-title = "Hugo Future Imperfect"
+title = "Real World Analytics"
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
 paginate = 3

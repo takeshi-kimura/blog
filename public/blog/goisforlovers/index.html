@@ -32,7 +32,7 @@ This document is a brief primer on using go templates."/>
 <meta property="og:description" content="Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
 This document is a brief primer on using go templates." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/blog/goisforlovers/" />
+<meta property="og:url" content="/blog/blog/goisforlovers/" />
 
 
 
@@ -76,8 +76,8 @@ This document is a brief primer on using go templates.">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
-            <link rel="stylesheet" href="/css/main.css">
-            <link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="/blog/css/main.css">
+            <link rel="stylesheet" href="/blog/css/add-on.css">
         
 
         
@@ -97,56 +97,56 @@ This document is a brief primer on using go templates.">
     
 <header id="header">
     
-      <h1><a href="/">blog</a></h1>
+      <h1><a href="/blog/">blog</a></h1>
     
 
     <nav class="links">
         <ul>
             
                 <li>
-                    <a href="/">
+                    <a href="/blog/">
                             <i class="fa fa-home">&nbsp;</i>Home
                     </a>
                 </li>
             
                 <li>
-                    <a href="/about/">
+                    <a href="/blog/about/">
                             <i class="fa fa-id-card-o">&nbsp;</i>About
                     </a>
                 </li>
             
                 <li>
-                    <a href="/blog/">
+                    <a href="/blog/blog/">
                             <i class="fa fa-newspaper-o">&nbsp;</i>Blog
                     </a>
                 </li>
             
                 <li>
-                    <a href="/itemized/">
+                    <a href="/blog/itemized/">
                             <i class="fa fa-list">&nbsp;</i>Itemized
                     </a>
                 </li>
             
                 <li>
-                    <a href="/categories/">
+                    <a href="/blog/categories/">
                             <i class="fa fa-sitemap">&nbsp;</i>Categories
                     </a>
                 </li>
             
                 <li>
-                    <a href="/contact/">
+                    <a href="/blog/contact/">
                             <i class="fa fa-envelope-o">&nbsp;</i>Contact
                     </a>
                 </li>
             
                 <li>
-                    <a href="/content/links/">
+                    <a href="/blog/content/links/">
                             <i class="">&nbsp;</i>Links
                     </a>
                 </li>
             
                 <li>
-                    <a href="/content/about/">
+                    <a href="/blog/content/about/">
                             <i class="">&nbsp;</i>About
                     </a>
                 </li>
@@ -164,7 +164,7 @@ This document is a brief primer on using go templates.">
                 <a class="fa-search" href="#search">Search</a>
                 <form id="search" method="get" action="//google.com/search">
                     <input type="text" name="q" placeholder="Search" />
-                    <input type="hidden" name="as_sitesearch" value="/">
+                    <input type="hidden" name="as_sitesearch" value="/blog/">
                 </form>
             </li>
             <li class="menu">
@@ -181,7 +181,7 @@ This document is a brief primer on using go templates.">
         <section>
             <form class="search" method="get" action="//google.com/search">
                 <input type="text" name="q" placeholder="Search" />
-                <input type="hidden" name="as_sitesearch" value="/">
+                <input type="hidden" name="as_sitesearch" value="/blog/">
             </form>
         </section>
 
@@ -190,7 +190,7 @@ This document is a brief primer on using go templates.">
             <ul class="links">
                 
                     <li>
-                        <a href="/">
+                        <a href="/blog/">
                             <h3>
                                 <i class="fa fa-home">&nbsp;</i>Home
                             </h3>
@@ -198,7 +198,7 @@ This document is a brief primer on using go templates.">
                     </li>
                 
                     <li>
-                        <a href="/about/">
+                        <a href="/blog/about/">
                             <h3>
                                 <i class="fa fa-id-card-o">&nbsp;</i>About
                             </h3>
@@ -206,7 +206,7 @@ This document is a brief primer on using go templates.">
                     </li>
                 
                     <li>
-                        <a href="/blog/">
+                        <a href="/blog/blog/">
                             <h3>
                                 <i class="fa fa-newspaper-o">&nbsp;</i>Blog
                             </h3>
@@ -214,7 +214,7 @@ This document is a brief primer on using go templates.">
                     </li>
                 
                     <li>
-                        <a href="/itemized/">
+                        <a href="/blog/itemized/">
                             <h3>
                                 <i class="fa fa-list">&nbsp;</i>Itemized
                             </h3>
@@ -222,7 +222,7 @@ This document is a brief primer on using go templates.">
                     </li>
                 
                     <li>
-                        <a href="/categories/">
+                        <a href="/blog/categories/">
                             <h3>
                                 <i class="fa fa-sitemap">&nbsp;</i>Categories
                             </h3>
@@ -230,7 +230,7 @@ This document is a brief primer on using go templates.">
                     </li>
                 
                     <li>
-                        <a href="/contact/">
+                        <a href="/blog/contact/">
                             <h3>
                                 <i class="fa fa-envelope-o">&nbsp;</i>Contact
                             </h3>
@@ -238,7 +238,7 @@ This document is a brief primer on using go templates.">
                     </li>
                 
                     <li>
-                        <a href="/content/links/">
+                        <a href="/blog/content/links/">
                             <h3>
                                 <i class="">&nbsp;</i>Links
                             </h3>
@@ -246,7 +246,7 @@ This document is a brief primer on using go templates.">
                     </li>
                 
                     <li>
-                        <a href="/content/about/">
+                        <a href="/blog/content/about/">
                             <h3>
                                 <i class="">&nbsp;</i>About
                             </h3>
@@ -271,7 +271,7 @@ This document is a brief primer on using go templates.">
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/">ggplot入りの日本語RmdをPDF出力する</a></h3>
+                                <h3><a href="/blog/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/">ggplot入りの日本語RmdをPDF出力する</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2017-12-08'>
@@ -283,7 +283,7 @@ This document is a brief primer on using go templates.">
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/">ggplot入りの日本語RmdをPDF出力する</a></h3>
+                                <h3><a href="/blog/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/">ggplot入りの日本語RmdをPDF出力する</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2017-12-08'>
@@ -295,7 +295,7 @@ This document is a brief primer on using go templates.">
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/blog/creating-a-new-theme/">Creating a New Theme</a></h3>
+                                <h3><a href="/blog/blog/creating-a-new-theme/">Creating a New Theme</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2014-09-28'>
@@ -323,8 +323,8 @@ This document is a brief primer on using go templates.">
         
         
 
-        <a href="/blog/creating-a-new-theme/" class="image featured">
-            <img src="/img/2014/09/pic03.jpg" alt="">
+        <a href="/blog/blog/creating-a-new-theme/" class="image featured">
+            <img src="/blog/img/2014/09/pic03.jpg" alt="">
         </a>
     
 
@@ -333,7 +333,7 @@ This document is a brief primer on using go templates.">
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/blog/goisforlovers/">(Hu)go Template Primer</a></h3>
+                                <h3><a href="/blog/blog/goisforlovers/">(Hu)go Template Primer</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2014-04-02'>
@@ -361,8 +361,8 @@ This document is a brief primer on using go templates.">
         
         
 
-        <a href="/blog/goisforlovers/" class="image featured">
-            <img src="/img/2014/04/pic02.jpg" alt="">
+        <a href="/blog/blog/goisforlovers/" class="image featured">
+            <img src="/blog/img/2014/04/pic02.jpg" alt="">
         </a>
     
 
@@ -371,7 +371,7 @@ This document is a brief primer on using go templates.">
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/blog/hugoisforlovers/">Getting Started with Hugo</a></h3>
+                                <h3><a href="/blog/blog/hugoisforlovers/">Getting Started with Hugo</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2014-04-02'>
@@ -399,8 +399,8 @@ This document is a brief primer on using go templates.">
         
         
 
-        <a href="/blog/hugoisforlovers/" class="image featured">
-            <img src="/img/2014/04/pic01.jpg" alt="">
+        <a href="/blog/blog/hugoisforlovers/" class="image featured">
+            <img src="/blog/img/2014/04/pic01.jpg" alt="">
         </a>
     
 
@@ -432,7 +432,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//twitter.com/share?url=%2fblog%2fgoisforlovers%2f&text=%28Hu%29go%20Template%20Primer&via=example" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=%2fblog%2fblog%2fgoisforlovers%2f&text=%28Hu%29go%20Template%20Primer&via=example" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -440,7 +440,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//plus.google.com/share?url=%2fblog%2fgoisforlovers%2f" target="_blank" class="share-btn google-plus">
+  <a href="//plus.google.com/share?url=%2fblog%2fblog%2fgoisforlovers%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
   </a>
@@ -448,7 +448,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fgoisforlovers%2f" target="_blank" class="share-btn facebook">
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fblog%2fgoisforlovers%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
     </a>
@@ -456,7 +456,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//reddit.com/submit?url=%2fblog%2fgoisforlovers%2f&title=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn reddit">
+  <a href="//reddit.com/submit?url=%2fblog%2fblog%2fgoisforlovers%2f&title=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
   </a>
@@ -464,7 +464,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fgoisforlovers%2f&title=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn linkedin">
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fblog%2fgoisforlovers%2f&title=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn linkedin">
       <i class="fa fa-linkedin"></i>
       <p>LinkedIn</p>
     </a>
@@ -472,7 +472,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fgoisforlovers%2f&title=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn stumbleupon">
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fblog%2fgoisforlovers%2f&title=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
   </a>
@@ -480,7 +480,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fgoisforlovers%2f&description=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn pinterest">
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fblog%2fgoisforlovers%2f&description=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn pinterest">
     <i class="fa fa-pinterest-p"></i>
     <p>Pinterest</p>
   </a>
@@ -488,7 +488,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="mailto:?subject=Check out this post by Unknown%20Author&body=%2fblog%2fgoisforlovers%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Check out this post by Unknown%20Author&body=%2fblog%2fblog%2fgoisforlovers%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -506,7 +506,7 @@ This document is a brief primer on using go templates.">
   <header>
     <div class="title">
         
-            <h1><a href="/blog/goisforlovers/">(Hu)go Template Primer</a></h1>
+            <h1><a href="/blog/blog/goisforlovers/">(Hu)go Template Primer</a></h1>
             
         
         
@@ -533,7 +533,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//twitter.com/share?url=%2fblog%2fgoisforlovers%2f&text=%28Hu%29go%20Template%20Primer&via=example" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=%2fblog%2fblog%2fgoisforlovers%2f&text=%28Hu%29go%20Template%20Primer&via=example" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -541,7 +541,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//plus.google.com/share?url=%2fblog%2fgoisforlovers%2f" target="_blank" class="share-btn google-plus">
+  <a href="//plus.google.com/share?url=%2fblog%2fblog%2fgoisforlovers%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
   </a>
@@ -549,7 +549,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fgoisforlovers%2f" target="_blank" class="share-btn facebook">
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fblog%2fgoisforlovers%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
     </a>
@@ -557,7 +557,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//reddit.com/submit?url=%2fblog%2fgoisforlovers%2f&title=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn reddit">
+  <a href="//reddit.com/submit?url=%2fblog%2fblog%2fgoisforlovers%2f&title=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
   </a>
@@ -565,7 +565,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fgoisforlovers%2f&title=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn linkedin">
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fblog%2fgoisforlovers%2f&title=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn linkedin">
       <i class="fa fa-linkedin"></i>
       <p>LinkedIn</p>
     </a>
@@ -573,7 +573,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fgoisforlovers%2f&title=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn stumbleupon">
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fblog%2fgoisforlovers%2f&title=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
   </a>
@@ -581,7 +581,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fgoisforlovers%2f&description=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn pinterest">
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fblog%2fgoisforlovers%2f&description=%28Hu%29go%20Template%20Primer" target="_blank" class="share-btn pinterest">
     <i class="fa fa-pinterest-p"></i>
     <p>Pinterest</p>
   </a>
@@ -589,7 +589,7 @@ This document is a brief primer on using go templates.">
 
 
 <li>
-  <a href="mailto:?subject=Check out this post by Unknown%20Author&body=%2fblog%2fgoisforlovers%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Check out this post by Unknown%20Author&body=%2fblog%2fblog%2fgoisforlovers%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -621,8 +621,8 @@ This document is a brief primer on using go templates.">
         
         
 
-        <a href="/blog/goisforlovers/" class="image featured">
-            <img src="/img/2014/04/pic02.jpg" alt="">
+        <a href="/blog/blog/goisforlovers/" class="image featured">
+            <img src="/blog/img/2014/04/pic02.jpg" alt="">
         </a>
     
 
@@ -1000,7 +1000,7 @@ so, such as in this example:</p>
 
     
     
-        <li><a href='/categories/go'>Go</a></li>
+        <li><a href='/blog/categories/go'>Go</a></li>
     
 </ul>
 
@@ -1034,12 +1034,12 @@ so, such as in this example:</p>
 
 <ul class="actions pagination">
     
-        <li><a href="/blog/hugoisforlovers/"
+        <li><a href="/blog/blog/hugoisforlovers/"
                 class="button big previous">Getting Started with Hugo</a></li>
     
 
     
-        <li><a href="/blog/creating-a-new-theme/"
+        <li><a href="/blog/blog/creating-a-new-theme/"
                 class="button big next">Creating a New Theme</a></li>
     
 </ul>
@@ -1054,7 +1054,7 @@ so, such as in this example:</p>
     
     
       
-        <a href='/' class="logo"><img src="/img/main/logo.jpg" alt="Hugo Future Imperfect" /></a>
+        <a href='/blog/' class="logo"><img src="/blog/img/main/logo.jpg" alt="Hugo Future Imperfect" /></a>
       
     
     
@@ -1181,7 +1181,7 @@ so, such as in this example:</p>
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/">ggplot入りの日本語RmdをPDF出力する</a>
+                <a href="/blog/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/">ggplot入りの日本語RmdをPDF出力する</a>
               </h3>
               
               <time class="published" datetime='2017-12-08'>
@@ -1195,7 +1195,7 @@ so, such as in this example:</p>
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/">ggplot入りの日本語RmdをPDF出力する</a>
+                <a href="/blog/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/">ggplot入りの日本語RmdをPDF出力する</a>
               </h3>
               
               <time class="published" datetime='2017-12-08'>
@@ -1209,7 +1209,7 @@ so, such as in this example:</p>
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/blog/creating-a-new-theme/">Creating a New Theme</a>
+                <a href="/blog/blog/creating-a-new-theme/">Creating a New Theme</a>
               </h3>
               
               <time class="published" datetime='2014-09-28'>
@@ -1238,8 +1238,8 @@ so, such as in this example:</p>
         
         
 
-        <a href="/blog/creating-a-new-theme/" class="image featured">
-            <img src="/img/2014/09/pic03.jpg" alt="">
+        <a href="/blog/blog/creating-a-new-theme/" class="image featured">
+            <img src="/blog/img/2014/09/pic03.jpg" alt="">
         </a>
     
 
@@ -1249,7 +1249,7 @@ so, such as in this example:</p>
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/blog/goisforlovers/">(Hu)go Template Primer</a>
+                <a href="/blog/blog/goisforlovers/">(Hu)go Template Primer</a>
               </h3>
               
               <time class="published" datetime='2014-04-02'>
@@ -1278,8 +1278,8 @@ so, such as in this example:</p>
         
         
 
-        <a href="/blog/goisforlovers/" class="image featured">
-            <img src="/img/2014/04/pic02.jpg" alt="">
+        <a href="/blog/blog/goisforlovers/" class="image featured">
+            <img src="/blog/img/2014/04/pic02.jpg" alt="">
         </a>
     
 
@@ -1289,7 +1289,7 @@ so, such as in this example:</p>
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/blog/hugoisforlovers/">Getting Started with Hugo</a>
+                <a href="/blog/blog/hugoisforlovers/">Getting Started with Hugo</a>
               </h3>
               
               <time class="published" datetime='2014-04-02'>
@@ -1318,8 +1318,8 @@ so, such as in this example:</p>
         
         
 
-        <a href="/blog/hugoisforlovers/" class="image featured">
-            <img src="/date2014/04/pic01.jpg" alt="">
+        <a href="/blog/blog/hugoisforlovers/" class="image featured">
+            <img src="/blog/img/2014/04/pic01.jpg" alt="">
         </a>
     
 
@@ -1369,7 +1369,7 @@ so, such as in this example:</p>
             <header>
               
                 <a href="/categories/hugo/">Hugo</a>
-                <span style="float:right;">3</span>
+                <span style="float:right;">2</span>
               
             </header>
           </article>
@@ -1391,17 +1391,6 @@ so, such as in this example:</p>
             <header>
               
                 <a href="/categories/go/">Go</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="/categories/jekyll/">Jekyll</a>
                 <span style="float:right;">1</span>
               
             </header>
@@ -1525,7 +1514,7 @@ so, such as in this example:</p>
       
         &copy; 2017
         
-          Hugo Future Imperfect
+          Real World Analytics
         
       .
       Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
@@ -1547,9 +1536,9 @@ so, such as in this example:</p>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
-      <script src="/js/util.js"></script>
-      <script src="/js/main.js"></script>
-      <script src="/js/backToTop.js"></script>
+      <script src="/blog/js/util.js"></script>
+      <script src="/blog/js/main.js"></script>
+      <script src="/blog/js/backToTop.js"></script>
     
 
     
