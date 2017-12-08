@@ -3,8 +3,9 @@ title: ggplot入りの日本語RmdをPDF出力する
 author: ''
 date: '2017-12-08'
 slug: ggplot入りの日本語rmdをpdf出力する
-categories: [R]
+categories: []
 tags: [R]
+thumbnail: "static/images/default.jpg"
 ---
 
 
