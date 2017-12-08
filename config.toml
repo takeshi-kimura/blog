@@ -6,3 +6,4 @@ relativeurls = true
 publishDir = "docs"
 hasCJKLanguage = true
 languageCode = "ja-jp"
+thumbnail = "images/default.jpg" 
