@@ -3,5 +3,4 @@ baseURL = "https://takeshi-kimura.github.io/blog/"
 languageCode = "en-us"
 title = "Real World Analytics"
 relativeurls = true
-publishDir = "docs"
 hasCJKLanguage = true
