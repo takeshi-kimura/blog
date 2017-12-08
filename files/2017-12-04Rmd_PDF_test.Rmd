@@ -1,0 +1,66 @@
+---
+title: "iris"
+date: "`r format(Sys.time(), '%Y/%m/%d')`"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    number_sections: true
+    toc: true
+header-includes: 
+  - \usepackage{xltxtra} 
+  - \usepackage{zxjatype} 
+  - \usepackage[ipa]{zxjafont} 
+  - \setjamainfont{Meiryo}  
+  - \setmainfont{Meiryo}  
+---
+
+
+```{r, include=FALSE}
+library(knitr)
+
+if (knitr::opts_knit$get("rmarkdown.pandoc.to") %in% c("beamer", "latex")) {
+  options(device = function(file, width = 7, height = 7, ...) {
+    cairo_pdf(tempfile(), width = width, height = height, ...)
+  })
+ knitr::opts_chunk$set(dev="cairo_pdf", dev.args=list(family="Meiryo"))
+}
+
+```
+
+\newpage
+
+#MTCATRSのレポート
+
+```{r, echo=FALSE}
+pacman::p_load(tidyverse,lubridate,stringr,knitr,rmarkdown,update = FALSE)
+mtcars %>% 
+    group_by(cyl) %>% 
+    summarise(mean=mean(disp)) %>% 
+    ggplot(aes(cyl,mean))+
+    geom_bar(stat="identity")
+```
+
+コメントもこんな感じでメイリオになりますよ
+
+\newpage
+
+#irisのレポート
+
+```{r}
+iris %>% 
+    ggplot(aes(Sepal.Length))+
+    geom_histogram()+
+    ggtitle("あやめのレポート")
+```
+
+\newpage
+
+#表の表示
+
+```{r}
+iris %>% 
+    head() %>% 
+    knitr::kable()
+```
+
+
