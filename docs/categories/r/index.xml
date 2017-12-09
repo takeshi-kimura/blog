@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Real World Analytics</title>
-    <link>https://takeshi-kimura.github.io/blog/categories/r/</link>
-    <description>Recent content in R on Real World Analytics</description>
+    <title>R on 京都で働く医学系データサイエンティストのブログ</title>
+    <link>/categories/r/</link>
+    <description>Recent content in R on 京都で働く医学系データサイエンティストのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 08 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://takeshi-kimura.github.io/blog/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ggplot入りの日本語RmdをPDF出力する</title>
-      <link>https://takeshi-kimura.github.io/blog/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/</link>
+      <link>/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/</link>
       <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://takeshi-kimura.github.io/blog/content/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/</guid>
-      <description>Introduction件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。 またRmdファイルの名前を日本語にするとエラーを吐くのでファイル名を英語にしてあげることも必要。
-YAML---title: &amp;quot;ggplot_japanese_rmarkdown&amp;quot;date: &amp;quot;`r format(Sys.time(), &amp;#39;%Y/%m/%d&amp;#39;)`&amp;quot;output:pdf_document:latex_engine: xelatexnumber_sections: truetoc: trueheader-includes: - \usepackage{xltxtra} - \usepackage{zxjatype} - \usepackage[ipa]{zxjafont} - \setjamainfont{Meiryo} - \setmainfont{Meiryo} ---ggplotに日本語入れる対策コードこちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK
-library(knitr)if (knitr::opts_knit$get(&amp;quot;rmarkdown.pandoc.to&amp;quot;) %in% c(&amp;quot;beamer&amp;quot;, &amp;quot;latex&amp;quot;)) {options(device = function(file, width = 7, height = 7, ...) {cairo_pdf(tempfile(), width = width, height = height, ...)})knitr::opts_chunk$set(dev=&amp;quot;cairo_pdf&amp;quot;, dev.args=list(family=&amp;quot;Meiryo&amp;quot;))}Source Code and sample pdf fileplease download here</description>
+      <guid>/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/</guid>
+      <description>Introduction 件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確</description>
     </item>
     
   </channel>

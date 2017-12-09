@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 京都で働く医学系データサイエンティストのブログ</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on 京都で働く医学系データサイエンティストのブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ggplot入りの日本語RmdをPDF出力する</title>
+      <link>/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/</link>
+      <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ggplot%E5%85%A5%E3%82%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9Ermd%E3%82%92pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B/</guid>
+      <description>Introduction 件名の通りだが、設定に結構苦労した。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確</description>
+    </item>
+    
+  </channel>
+</rss>
