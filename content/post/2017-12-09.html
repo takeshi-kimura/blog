@@ -1,0 +1,67 @@
+---
+title: Rstudioでブログ作成
+author: ''
+date: '2017-12-09'
+slug: '2017-12-09'
+tags:
+  - R
+  - blogdown
+---
+
+
+
+<div id="introduction" class="section level1">
+<h1>introduction</h1>
+<p>Rstudioでブログを始める方法まとめ</p>
+</div>
+<div id="step1blogdownhugodl" class="section level1">
+<h1>Step1、blogdownパッケージ、hugoのDL</h1>
+<p>Rで下記のコードを実行する 色々DLされるのでしばしまつ。 なお、ここいらはRstudioではなく、Rconsoleで直接やったほうが無難。 エラー出ること多い。</p>
+<pre class="r"><code>install.packages(&quot;blogdown&quot;)
+library(blogdown)
+install_hugo()</code></pre>
+</div>
+<div id="step2robustdl" class="section level1">
+<h1>Step2、RobustテーマのDL</h1>
+<p>ブログテーマが色々公開されている。</p>
+<p><a href="https://themes.gohugo.io/" class="uri">https://themes.gohugo.io/</a></p>
+<p>好きなものを選べがよいが、色々調べて<a href="https://themes.gohugo.io/robust/">Robust</a>を使用。 日本人が作ったテーマなので、設定色々いじらなくても、そのまま使えるのが良い。</p>
+<p>こちらもコンソールで下記を走らせる。くどいようだがRconsoleで。Rstudioは使わずに。</p>
+<pre class="r"><code>library(&quot;blogdown&quot;)
+new_site(&quot;C:/Users/Takeshi/Documents/Rstudio/robust/&quot;,theme = &quot;dim0627/hugo_theme_robust&quot;)</code></pre>
+<p>ここでもはまるのが、new_siteの第一引数では<strong>現在存在しない</strong>フォルダパスを指定する。すると新しくフォルダ作成、必要なファイルのDLがそのフォルダになされる。themeのところはインストールしたいhugo_themaがあるgithubのURLの一部をいれる。</p>
+</div>
+<div id="step3github" class="section level1">
+<h1>Step3、Githubの設定</h1>
+<p>ここでは詳しくのべないが、<a href="https://qiita.com/masato_t/items/7bbfa74f8de0dc06c91c">こちら</a>など参考にgithubとクローンしたフォルダをローカルに作成する。</p>
+</div>
+<div id="step4github" class="section level1">
+<h1>Step4、githubとクローニングしているフォルダにテーマをコピー</h1>
+<p>Step2でDLしたテーマをStep3でクローンしているフォルダにコピーする。</p>
+</div>
+<div id="step5" class="section level1">
+<h1>Step5、テーマの設定ファイルをいじる</h1>
+<p>config.tomlというファイルがディレクトリの中にあるはず。こちらがもろもろの設定ファイル。 こちらも色々ためして、下記が安定。 baseURLは後にでてくるgithubで表示されるURLを使用する。 URL相対参照をオプションで指定するとRobustでは画像が表示されなかった。</p>
+<pre class="r"><code>theme = &quot;hugo_theme_robust&quot;
+baseURL = &quot;https://takeshi-kimura.github.io/blog/&quot;
+languageCode = &quot;en-us&quot;
+title = &quot;京都で働く医学系データサイエンティストのブログ&quot;
+publishDir = &quot;docs&quot;
+hasCJKLanguage = true</code></pre>
+</div>
+<div id="step6" class="section level1">
+<h1>Step6、ローカルで試してみる。</h1>
+<p>こちらもRstudioではなく、Rコンソールで行う。</p>
+<pre class="r"><code>setwd(&quot;C:/Users/Takeshi/Documents/Rstudio/blog&quot;)
+blogdown::build_site()
+blogdown::serve_site()</code></pre>
+<p>まず、setwdでgithubと連携しているフォルダをworkig directoryに build_siteでmdファイルからhtmlファイルなどをいい感じに作成してくれる。 serve_siteでローカルでお試しにどんなふうに見えるか試すことができる。 更新作業のときもbuild_siteは毎回必要なことに注意</p>
+</div>
+<div id="step7github" class="section level1">
+<h1>Step7、Githubにプッシュする。</h1>
+<p>Githubにプッシュしてから、 次にレポジトリのSettingsを再び開いてGitHub PagesのSource設定に行き master branch /docs folderを選び直します。 (正しくmasterにpushできていれば、この段階でようやく /docs/folderの選択肢が選べるはずです) Saveを押してその画面の右上に表示されるのがURLになります。 それでそのURLにアクセスすればFinish!</p>
+</div>
+<div id="tips" class="section level1">
+<h1>Tips</h1>
+<p>これまでのブログコンテンツはcontents/の中に保存されており、いらないサンプルファイルはここから直接削除すればOK！</p>
+</div>
