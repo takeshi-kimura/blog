@@ -2,6 +2,5 @@ theme = "hugo_theme_robust"
 baseURL = "https://takeshi-kimura.github.io/blog/"
 languageCode = "en-us"
 title = "京都で働く医学系データサイエンティストのブログ"
-relativeurls = true
 publishDir = "docs"
 hasCJKLanguage = true
