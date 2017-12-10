@@ -1,0 +1,11 @@
+
+setwd("C:/Users/Takeshi/Documents/Rstudio/blog")
+blogdown::build_site()
+blogdown::serve_site()
+
+https://takeshi-kimura.github.io/blog/
+https://qiita.com/masato_t/items/7bbfa74f8de0dc06c91c
+
+library("blogdown")
+new_site("C:/Users/Takeshi/Documents/Rstudio/robust/",theme = "dim0627/hugo_theme_robust")
+C:/Users/Takeshi/Documents/Rstudio
