@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 京都で働く医学系データサイエンティストのブログ</title>
-    <link>https://takeshi-kimura.github.io/blog/post/</link>
+    <link>/blog/post/</link>
     <description>Recent content in Posts on 京都で働く医学系データサイエンティストのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://takeshi-kimura.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/blog/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Rstudioでブログ作成</title>
-      <link>https://takeshi-kimura.github.io/blog/post/2017-12-09/</link>
+      <link>/blog/post/2017-12-09/</link>
       <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://takeshi-kimura.github.io/blog/post/2017-12-09/</guid>
+      <guid>/blog/post/2017-12-09/</guid>
       <description>introduction Rstudioでブログを始める方法まとめ Step1、blogdownパッケージ、hugoのDL Rで下記のコードを実行する 色々DLされるので</description>
     </item>
     
     <item>
       <title>ggplotで出力されるグラフの中に日本語が含まれるRmarkdownファイルを、RstudioでPDF出力する設定</title>
-      <link>https://takeshi-kimura.github.io/blog/post/ggplot%E3%81%A7%E5%87%BA%E5%8A%9B%E3%81%95%E3%82%8C%E3%82%8B%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E4%B8%AD%E3%81%AB%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%8C%E5%90%AB%E3%81%BE%E3%82%8C%E3%82%8Brmarkdown%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92rstudio%E3%81%A7pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B%E8%A8%AD%E5%AE%9A/</link>
+      <link>/blog/post/ggplot%E3%81%A7%E5%87%BA%E5%8A%9B%E3%81%95%E3%82%8C%E3%82%8B%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E4%B8%AD%E3%81%AB%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%8C%E5%90%AB%E3%81%BE%E3%82%8C%E3%82%8Brmarkdown%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92rstudio%E3%81%A7pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B%E8%A8%AD%E5%AE%9A/</link>
       <pubDate>Fri, 08 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://takeshi-kimura.github.io/blog/post/ggplot%E3%81%A7%E5%87%BA%E5%8A%9B%E3%81%95%E3%82%8C%E3%82%8B%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E4%B8%AD%E3%81%AB%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%8C%E5%90%AB%E3%81%BE%E3%82%8C%E3%82%8Brmarkdown%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92rstudio%E3%81%A7pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B%E8%A8%AD%E5%AE%9A/</guid>
+      <guid>/blog/post/ggplot%E3%81%A7%E5%87%BA%E5%8A%9B%E3%81%95%E3%82%8C%E3%82%8B%E3%82%B0%E3%83%A9%E3%83%95%E3%81%AE%E4%B8%AD%E3%81%AB%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%81%8C%E5%90%AB%E3%81%BE%E3%82%8C%E3%82%8Brmarkdown%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92rstudio%E3%81%A7pdf%E5%87%BA%E5%8A%9B%E3%81%99%E3%82%8B%E8%A8%AD%E5%AE%9A/</guid>
       <description>Introduction 件名の通りだが、設定に結構苦労した。色々しらべたが、本文中に日本語が含まれるだけなら情報があったが、ggplotの中にも日本語が含まれる場</description>
     </item>
     

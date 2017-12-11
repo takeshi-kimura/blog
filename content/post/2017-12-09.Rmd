@@ -8,11 +8,11 @@ tags:
   - blogdown
 ---
 
-#introduction
+## introduction
 
 Rstudioでブログを始める方法まとめ
 
-#Step1、blogdownパッケージ、hugoのDL
+## Step1、blogdownパッケージ、hugoのDL
 
 Rで下記のコードを実行する
 色々DLされるのでしばしまつ。
@@ -25,7 +25,7 @@ library(blogdown)
 install_hugo()
 ```
 
-#Step2、RobustテーマのDL
+## Step2、RobustテーマのDL
 
 ブログテーマが色々公開されている。
 
@@ -43,15 +43,15 @@ new_site("C:/Users/Takeshi/Documents/Rstudio/robust/",theme = "dim0627/hugo_them
 
 ここでもはまるのが、new_siteの第一引数では**現在存在しない**フォルダパスを指定する。すると新しくフォルダ作成、必要なファイルのDLがそのフォルダになされる。themeのところはインストールしたいhugo_themaがあるgithubのURLの一部をいれる。
 
-#Step3、Githubの設定
+## Step3、Githubの設定
 
 ここでは詳しくのべないが、[こちら](https://qiita.com/masato_t/items/7bbfa74f8de0dc06c91c)など参考にgithubとクローンしたフォルダをローカルに作成する。
 
-#Step4、githubとクローニングしているフォルダにテーマをコピー
+## Step4、githubとクローニングしているフォルダにテーマをコピー
 
 Step2でDLしたテーマをStep3でクローンしているフォルダにコピーする。
 
-#Step5、テーマの設定ファイルをいじる
+## Step5、テーマの設定ファイルをいじる
 
 config.tomlというファイルがディレクトリの中にあるはず。こちらがもろもろの設定ファイル。
 こちらも色々ためして、下記が安定。
@@ -68,7 +68,7 @@ publishDir = "docs"
 hasCJKLanguage = true
 ```
 
-#Step6、ローカルで試してみる。
+## Step6、ローカルで試してみる。
 
 こちらもRstudioではなく、Rコンソールで行う。
 
@@ -83,7 +83,7 @@ build_siteでmdファイルからhtmlファイルなどをいい感じに作成�
 serve_siteでローカルでお試しにどんなふうに見えるか試すことができる。
 更新作業のときもbuild_siteは毎回必要なことに注意
 
-#Step7、Githubにプッシュする。
+## Step7、Githubにプッシュする。
 
 Githubにプッシュしてから、
 次にレポジトリのSettingsを再び開いてGitHub PagesのSource設定に行き
@@ -93,7 +93,7 @@ master branch /docs folderを選び直します。
 Saveを押してその画面の右上に表示されるのがURLになります。
 それでそのURLにアクセスすればFinish!
 
-#Tips
+## Tips
 
 これまでのブログコンテンツはcontents/の中に保存されており、いらないサンプルファイルはここから直接削除すればOK！
 

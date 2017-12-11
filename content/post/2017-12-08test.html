@@ -8,12 +8,12 @@ tags: [R]
 
 
 
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
 <p>件名の通りだが、設定に結構苦労した。色々しらべたが、本文中に日本語が含まれるだけなら情報があったが、ggplotの中にも日本語が含まれる場合の対応についてまとめているところはなかったので、まとめる。下記のYAMLコードを設定。デフォルトのフォントはMeiryoを指定。全てWindows環境で動作は確認。前提としてTexliveのインストールは必要。また<strong>Rmdファイルの名前を日本語にするとエラーを吐く</strong>のでファイル名を英語にしてあげることも必要。</p>
 </div>
-<div id="yaml" class="section level1">
-<h1>YAML</h1>
+<div id="yaml" class="section level2">
+<h2>YAML</h2>
 <pre class="r"><code>---
 title: &quot;ggplot_japanese_rmarkdown&quot;
 date: &quot;`r format(Sys.time(), &#39;%Y/%m/%d&#39;)`&quot;
@@ -30,8 +30,8 @@ header-includes:
   - \setmainfont{Meiryo} 
 ---</code></pre>
 </div>
-<div id="ggplot" class="section level1">
-<h1>ggplotに日本語入れる対策コード</h1>
+<div id="ggplot" class="section level2">
+<h2>ggplotに日本語入れる対策コード</h2>
 <p>こちらをinclude=FALSEで走らせる、以降はふつうにggplot書いてあげればOK</p>
 <pre class="r"><code>library(knitr)
 
@@ -41,8 +41,8 @@ if (knitr::opts_knit$get(&quot;rmarkdown.pandoc.to&quot;) %in% c(&quot;beamer&qu
   })
   knitr::opts_chunk$set(dev=&quot;cairo_pdf&quot;, dev.args=list(family=&quot;Meiryo&quot;))
 }</code></pre>
+</div>
 <div id="source-code-and-sample-pdf-file" class="section level2">
 <h2>Source Code and sample pdf file</h2>
 <p>please download <a href="https://github.com/takeshi-kimura/blog/tree/master/files/2017-12-09">here</a></p>
-</div>
 </div>
